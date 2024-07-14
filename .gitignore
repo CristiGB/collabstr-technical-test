@@ -1,0 +1,14 @@
+collabstr/__pycache__/
+collabstr/app/**/**/__pycache__/
+collabstr/**/**/__pycache__/
+collabstr/**/**/**/__pycache__/
+collabstr/**/**/**/**/__pycache__/
+collabstr/collabs/creds
+.env/
+env/
+collabstr/creators.json
+collabstr/collabstr/.env
+.venv/
+venv/
+.env
+*.sql

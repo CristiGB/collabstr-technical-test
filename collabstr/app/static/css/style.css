@@ -1,0 +1,234 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--black);
+}
+
+*:focus{
+    outline: 0;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+    display: none;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 85px;
+    height: 85px;
+    background-color: white;
+    z-index: 5;
+} 
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.full-logo-img {
+    width: 130px;
+    height: auto;
+    max-height: 35px;
+}
+
+#content{
+    width: 88%;
+    max-width: 1600px;
+    margin: 0 auto 8% auto;
+}
+
+.main{
+    position: relative;
+    padding-top: 4rem;
+}
+
+/********* Your CSS Here **********/
+.scroll-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #bf5ba4;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+}
+.scroll-to-top-btn:hover {
+    background-color: #c245c1;
+}
+
+.scroll-to-top-btn:focus {
+    outline: none; 
+}
+
+button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+/*----------------------- tabs-----------------------*/
+.tabs{
+    display: flex;
+}
+
+.tab-link{
+    color: #333333;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.tab-link.active{
+    color: #bf5ba4;
+}
+
+.tab-link:hover{
+    color: #823f9c;
+}
+
+.section--title{
+    text-align: center;
+    font-size: 24px;
+}
+/*---------------------Content list----------------------*/
+.content-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 35px 20px;
+}
+.content-item{
+    list-style: none;
+}
+
+.content-url{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card-content{
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.play-btn, .download-btn{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #2e292fd9;
+    color: #fff;
+    border-radius: 50%;
+    z-index: 2;
+    transition: left 0.3s ease, opacity 0.3s ease;
+}
+.play-btn{
+    right: 0;
+    margin-right: 1rem;
+}
+
+.download-btn{
+    left: -100px;
+    margin-left: 0.5rem;
+}
+
+.play-btn:hover, .download-btn:hover{
+    background-color: #2e292fc2;
+}
+.card-content:hover .download-btn{
+    left: 0px;
+    opacity: 1;
+}
+
+
+.creator-name{
+    font-size: 14px;
+    font-weight: 600;
+}
+.wrap-rating{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #7d7c7c;
+}
+.wrap-rating p{
+    margin: 0;
+}
+.creator-rating{
+    font-size: 14px;
+}
+
+/*-------------------Pagination-----------------------*/
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    gap: 1rem
+}
+
+.pagination a{
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #121113;
+    border: 1px solid #2c2c2c;
+    border-radius: 4px;
+}
+
+footer p{
+    padding: 1rem;
+    text-align: center;
+    color: #2b2b2b;
+    font-size: 12px;
+}
+
+/********* ------------- **********/
+
+@media only screen and (max-width: 800px) {
+    .header {
+        min-height: 65px;
+        height: 65px;
+    }
+
+    .header-row{
+        width: 92%;
+    }
+
+    .full-logo-img {
+        width: 105px;
+        max-height: 28px;
+    }
+
+    #content {
+        width: 92%;
+        margin: 0 auto 15% auto;
+    }
+}
