@@ -3,13 +3,13 @@
 $(document).ready(function() {
 
     $('.tab-link').on('click', function(event) {
-        event.preventDefault();  // Prevent the default link behavior
+        event.preventDefault(); 
 
         $('.tab-link').removeClass('active');
         $(this).addClass('active');
 
         const platform = $(this).data('platform');
-        const url = `${window.location.origin}/collabs/app/${platform}/`;
+        const url = `${window.location.origin}/collabs/${platform}/`;
 
         window.location.href = url;
 

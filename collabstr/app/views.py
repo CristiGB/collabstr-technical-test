@@ -22,7 +22,8 @@ def content_list(request):
     for content in contents_list:
         content.is_video = content.url.lower().endswith(VIDEO_EXTENSIONS)
     contents = get_paginated_contents(contents_list, request.GET.get('page'))
-    return render(request, 'content_list.html', {'contents': contents})
+    return render(request, 'content_list.html', {'contents': contents,'platform': 'all'})
+
 
 def filtered_content(request, platform):
     if platform == 'all':
@@ -34,4 +35,4 @@ def filtered_content(request, platform):
     for content in contents:
         content.is_video = content.url.lower().endswith(VIDEO_EXTENSIONS)
 
-    return render(request, 'content_list.html', {'contents': contents})
+    return render(request, 'content_list.html', {'contents': contents, 'platform': platform})
